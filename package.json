@@ -1,0 +1,21 @@
+{
+  "name": "originals",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@ordzaar/standard-prettier": "^0.4.8",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "semver": "^7.5.4",
+    "turbo": "^1.11.0"
+  },
+  "engines": {
+    "node": ">=18.16.0",
+    "pnpm": ">=8.11.0"
+  },
+  "packageManager": "pnpm@8.11.0"
+}
