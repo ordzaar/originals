@@ -7,11 +7,11 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "@ordzaar/standard-prettier": "^0.4.8",
+    "@ordzaar/standard-prettier": "^0.4.9",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "semver": "^7.5.4",
-    "turbo": "^1.11.0"
+    "turbo": "^1.11.1"
   },
   "engines": {
     "node": ">=18.16.0",
