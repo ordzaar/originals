@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "@ordzaar/standard-prettier": "^1.1.0",
-    "husky": "^8.0.3",
+    "@ordzaar/standard-prettier": "^1.2.0",
+    "husky": "^9.0.6",
     "lint-staged": "^15.2.0",
     "semver": "^7.5.4",
     "turbo": "^1.11.3"

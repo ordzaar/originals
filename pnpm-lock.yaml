@@ -6,11 +6,11 @@ settings:
 
 devDependencies:
   '@ordzaar/standard-prettier':
-    specifier: ^1.1.0
-    version: 1.1.0(@typescript-eslint/eslint-plugin@6.19.1)(@typescript-eslint/parser@6.19.1)(eslint-plugin-import@2.29.1)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(typescript@5.3.3)
+    specifier: ^1.2.0
+    version: 1.2.0(@typescript-eslint/eslint-plugin@6.19.1)(@typescript-eslint/parser@6.19.1)(eslint-plugin-import@2.29.1)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(typescript@5.3.3)
   husky:
-    specifier: ^8.0.3
-    version: 8.0.3
+    specifier: ^9.0.6
+    version: 9.0.6
   lint-staged:
     specifier: ^15.2.0
     version: 15.2.0
@@ -28,8 +28,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /@babel/runtime@7.23.8:
-    resolution: {integrity: sha512-Y7KbAP984rn1VGMbGqKmBLio9V7y5Je9GvU4rQPCPinCyNfUcToxIXl06d59URp/F3LwinvODxab5N/G6qggkw==}
+  /@babel/runtime@7.23.9:
+    resolution: {integrity: sha512-0CX6F+BI2s9dkUqr08KFrAIZgNFj75rdBU/DjCyYLIaV/quFjkk6T+EJ2LkZHyZTbEV4L5p97mNkUsHl2wLFAw==}
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.1
@@ -110,20 +110,20 @@ packages:
     engines: {node: '>= 8'}
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
-      fastq: 1.16.0
+      fastq: 1.17.0
     dev: true
 
-  /@ordzaar/standard-prettier@1.1.0(@typescript-eslint/eslint-plugin@6.19.1)(@typescript-eslint/parser@6.19.1)(eslint-plugin-import@2.29.1)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(typescript@5.3.3):
-    resolution: {integrity: sha512-oDkknj8YGoJFRgFp0bCsxHbonN4IjT6e2gh43yQmITAdI/QwOJEwZKlz0YBoZGXcnzublAof6ARRuRqTiJurpQ==}
+  /@ordzaar/standard-prettier@1.2.0(@typescript-eslint/eslint-plugin@6.19.1)(@typescript-eslint/parser@6.19.1)(eslint-plugin-import@2.29.1)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(typescript@5.3.3):
+    resolution: {integrity: sha512-QzU1ARbWkL1SN02kxsqDU18Kdb2UD9qhCXlRrX4OZOaU8UhCooEEGyAOXghct30Zn6fUOJTKAesY9AuVRseeOg==}
     dependencies:
-      '@ordzaar/standard-typescript': 1.1.0(typescript@5.3.3)
+      '@ordzaar/standard-typescript': 1.2.0(typescript@5.3.3)
       eslint: 8.56.0
       eslint-config-airbnb: 19.0.4(eslint-plugin-import@2.29.1)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(eslint@8.56.0)
       eslint-config-airbnb-typescript: 17.1.0(@typescript-eslint/eslint-plugin@6.19.1)(@typescript-eslint/parser@6.19.1)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
       eslint-config-prettier: 9.1.0(eslint@8.56.0)
       eslint-plugin-prettier: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.4)
       eslint-plugin-simple-import-sort: 10.0.0(eslint@8.56.0)
-      husky: 8.0.3
+      husky: 9.0.6
       lint-staged: 15.2.0
       prettier: 3.2.4
     transitivePeerDependencies:
@@ -138,8 +138,8 @@ packages:
       - typescript
     dev: true
 
-  /@ordzaar/standard-typescript@1.1.0(typescript@5.3.3):
-    resolution: {integrity: sha512-UbZA3G12ojv2t4sos5VDEEXAfaaY04p6HysrR0lRMEH2kt/9LTXvMgohjdgLifRMkTmZF6bnVjqpEVeLuGE/RA==}
+  /@ordzaar/standard-typescript@1.2.0(typescript@5.3.3):
+    resolution: {integrity: sha512-wSgpFFX4cOfXCJ2xLa92TZlDQjSnHIq/n9pg5B5xeCQOz2705ow4qRcYSsUfiKWLtKwJ2Ee2vVfHbgdveCfuyw==}
     peerDependencies:
       typescript: 5.3.3
     dependencies:
@@ -881,7 +881,7 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
     dependencies:
-      '@babel/runtime': 7.23.8
+      '@babel/runtime': 7.23.9
       aria-query: 5.3.0
       array-includes: 3.1.7
       array.prototype.flatmap: 1.3.2
@@ -1102,8 +1102,8 @@ packages:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
     dev: true
 
-  /fastq@1.16.0:
-    resolution: {integrity: sha512-ifCoaXsDrsdkWTtiNJX5uzHDsrck5TzfKKDcuFFTIrrc/BS076qgEIfoIy1VeZqViznfKiysPYTh/QeHtnIsYA==}
+  /fastq@1.17.0:
+    resolution: {integrity: sha512-zGygtijUMT7jnk3h26kUms3BkSDp4IfIKjmnqI2tvx6nuBfiF1UqOxbnLfzdv+apBy+53oaImsKtMw/xYbW+1w==}
     dependencies:
       reusify: 1.0.4
     dev: true
@@ -1303,9 +1303,9 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: true
 
-  /husky@8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
+  /husky@9.0.6:
+    resolution: {integrity: sha512-EEuw/rfTiMjOfuL7pGO/i9otg1u36TXxqjIA6D9qxVjd/UXoDOsLor/BSFf5hTK50shwzCU3aVVwdXDp/lp7RA==}
+    engines: {node: '>=18'}
     hasBin: true
     dev: true
 
