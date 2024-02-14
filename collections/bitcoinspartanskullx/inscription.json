@@ -1,44 +1,30 @@
 [
   {
     "id": "0b082168e205e3142c23e5c3901e9aada744ef6109c308bffeb0d27266f8fdc8i0",
-    "meta": {
-      "name": "Bitcoin Spartan Skullx #1"
-    }
+    "meta": { "name": "Bitcoin Spartan Skullx #1" }
   },
   {
     "id": "d000214a62d360a7eb498f9edf61da864ea33bf434f03e319a7dbedbab5afca4i0",
-    "meta": {
-      "name": "Bitcoin Spartan Skullx #2"
-    }
+    "meta": { "name": "Bitcoin Spartan Skullx #2" }
   },
   {
     "id": "798e9491124b052b4be9f9d4f7b74afc831b1f942e7ff85ebc4a7c29446854b2i0",
-    "meta": {
-      "name": "Bitcoin Spartan Skullx #3"
-    }
+    "meta": { "name": "Bitcoin Spartan Skullx #3" }
   },
   {
     "id": "ad427852c7d5ec4048044131138b7dfc5d34295c225273a58795f41ad48a7a73i0",
-    "meta": {
-      "name": "Bitcoin Spartan Skullx #4"
-    }
+    "meta": { "name": "Bitcoin Spartan Skullx #4" }
   },
   {
     "id": "63dd6984e5ce442af0d4a549a6583e3825c7bdfc1eb0774f09e350f345939453i0",
-    "meta": {
-      "name": "Bitcoin Spartan Skullx #5"
-    }
+    "meta": { "name": "Bitcoin Spartan Skullx #5" }
   },
   {
     "id": "ae7569584a6c095d55c6933541627f70a914e2f617b99bbb4ba5c7417881c6a3i0",
-    "meta": {
-      "name": "Bitcoin Spartan Skullx #6"
-    }
+    "meta": { "name": "Bitcoin Spartan Skullx #6" }
   },
   {
     "id": "fe54e2f32eddc075e57fe0f16d80c5f336744b7be301d476de2e7e13464ca1d5i0",
-    "meta": {
-      "name": "Bitcoin Spartan Skullx #7"
-    }
+    "meta": { "name": "Bitcoin Spartan Skullx #7" }
   }
 ]
