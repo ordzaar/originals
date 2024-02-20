@@ -8,9 +8,6 @@ dependencies:
   '@octokit/core':
     specifier: ^5.1.0
     version: 5.1.0
-  '@octokit/plugin-create-or-update-text-file':
-    specifier: ^4.0.1
-    version: 4.0.1(@octokit/core@5.1.0)
   axios:
     specifier: ^1.6.7
     version: 1.6.7
@@ -193,17 +190,6 @@ packages:
 
   /@octokit/openapi-types@19.1.0:
     resolution: {integrity: sha512-6G+ywGClliGQwRsjvqVYpklIfa7oRPA0vyhPQG/1Feh+B+wU0vGH1JiJ5T25d3g1JZYBHzR2qefLi9x8Gt+cpw==}
-    dev: false
-
-  /@octokit/plugin-create-or-update-text-file@4.0.1(@octokit/core@5.1.0):
-    resolution: {integrity: sha512-r0kY7MrV+QTTPeVzNmjeAuuPraF8i6cQ2ff2/W+C2monXTAyx21jLd/2jczrC2e+ohnXQvDT3acqpBhtBcqXYQ==}
-    engines: {node: '>= 18'}
-    peerDependencies:
-      '@octokit/core': '>= 5'
-    dependencies:
-      '@octokit/core': 5.1.0
-      '@octokit/request-error': 5.0.1
-      '@octokit/types': 12.5.0
     dev: false
 
   /@octokit/request-error@5.0.1:

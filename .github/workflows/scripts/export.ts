@@ -1,10 +1,8 @@
 import { Octokit } from "@octokit/core";
 import axios from "axios";
-import {createOrUpdateTextFile} from "@octokit/plugin-create-or-update-text-file";
 
 async function main() {
-  const MyOctokit = Octokit.plugin(createOrUpdateTextFile);
-  const octokit = new MyOctokit({
+  const octokit = new Octokit({
     auth: process.env.GITHUB_ACCESS_TOKEN,
   });
 
@@ -29,17 +27,20 @@ async function main() {
         },
       );
 
-      const {
-        updated,
-        data,
-      } = await octokit.createOrUpdateTextFile({
+      await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
         owner: "ordzaar",
         repo: "originals",
         path: `collections/${uid}/inscription.json`,
-        content: contents.data.inscriptions,
         message: `chore(bot): update ${uid} hashlist`,
+        content: btoa(contents.data.inscriptions),
+        committer: {
+          name: "Ordo",
+          email: "engineering@ordzaar.com",
+        },
+        headers: {
+          accept: "application/vnd.github+json",
+        },
       });
-      console.log(data);
     }),
   );
 }
