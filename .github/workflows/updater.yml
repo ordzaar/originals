@@ -2,9 +2,7 @@ name: Update Hashlists
 
 on:
   schedule:
-    - cron: "0 */2 * * *"
-  push:
-    branches: [main]
+    - cron: "*/5 * * * *"
 
 jobs:
   update_hashlist:

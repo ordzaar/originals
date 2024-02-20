@@ -47,10 +47,7 @@ async function main() {
           path: `collections/${uid}/inscription.json`,
           message: `chore(bot): update ${uid} hashlist`,
           content: btoa(contents.data.inscriptions),
-          sha,
-          headers: {
-            accept: "application/vnd.github+json",
-          },
+          sha
         });
       }
     }),
