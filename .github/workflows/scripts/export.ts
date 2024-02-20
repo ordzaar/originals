@@ -27,33 +27,35 @@ async function main() {
         },
       );
 
-      const response = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
-        owner: 'ordzaar',
-        repo: 'originals',
-        path: `collections/${uid}/inscription.json`,
-        headers: {
-          'X-GitHub-Api-Version': '2022-11-28'
-        }
-      });
-
-      const sha = response.data['sha'] as string;
-
-
-      await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
-        owner: "ordzaar",
-        repo: "originals",
-        path: `collections/${uid}/inscription.json`,
-        message: `chore(bot): update ${uid} hashlist`,
-        content: btoa(contents.data.inscriptions),
-        sha,
-        committer: {
-          name: "Ordo",
-          email: "engineering@ordzaar.com",
+      const { data } = await octokit.request(
+        "GET /repos/{owner}/{repo}/contents/{path}",
+        {
+          owner: "ordzaar",
+          repo: "originals",
+          path: `collections/${uid}/inscription.json`,
+          headers: {
+            "X-GitHub-Api-Version": "2022-11-28",
+          },
         },
-        headers: {
-          accept: "application/vnd.github+json",
-        },
-      });
+      );
+
+      if (data[0] != undefined) {
+        await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
+          owner: "ordzaar",
+          repo: "originals",
+          path: `collections/${uid}/inscription.json`,
+          message: `chore(bot): update ${uid} hashlist`,
+          content: btoa(contents.data.inscriptions),
+          sha: data[0].sha,
+          committer: {
+            name: "Ordo",
+            email: "engineering@ordzaar.com",
+          },
+          headers: {
+            accept: "application/vnd.github+json",
+          },
+        });
+      }
     }),
   );
 }
