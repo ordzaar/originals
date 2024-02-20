@@ -10,11 +10,12 @@ async function main() {
   const endpoint = process.env?.ENDPOINT as string;
   const token = process.env?.ORDZAAR_BEARER_TOKEN as string;
   const secretKey = process.env?.ORDZAAR_SECRET_KEY as string;
+  const pathKey = process.env?.ORDZAAR_PATH_KEY as string;
 
   await Promise.all(
     uids.map(async (uid) => {
       const contents = await axios.post(
-        endpoint,
+        `${endpoint}?x-allow-key=${pathKey}`,
         {
           collectionUid: uid,
         },
