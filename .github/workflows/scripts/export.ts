@@ -34,7 +34,9 @@ async function main() {
         headers: {
           'X-GitHub-Api-Version': '2022-11-28'
         }
-      })
+      });
+
+      const sha = response.data['sha'] as string;
 
 
       await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
@@ -43,7 +45,7 @@ async function main() {
         path: `collections/${uid}/inscription.json`,
         message: `chore(bot): update ${uid} hashlist`,
         content: btoa(contents.data.inscriptions),
-        sha: response.data['sha'],
+        sha,
         committer: {
           name: "Ordo",
           email: "engineering@ordzaar.com",
