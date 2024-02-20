@@ -47,7 +47,7 @@ async function main() {
           path: `collections/${uid}/inscription.json`,
           message: `chore(bot): update ${uid} hashlist`,
           content: btoa(contents.data.inscriptions),
-          sha
+          sha,
         });
       }
     }),
