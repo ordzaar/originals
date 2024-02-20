@@ -11,14 +11,14 @@ async function main() {
   await Promise.all(
     uids.map(async (uid) => {
       const contents = await axios.post(
-        process.env.ENDPOINT,
+        process.env?.ENDPOINT,
         {
           collectionUid: uid,
         },
         {
           headers: {
-            Authorization: `Bearer ${process.env.ORDZAAR_BEARER_TOKEN}`,
-            "x-lambda-bot": process.env.ORDZAAR_SECRET_KEY,
+            Authorization: `Bearer ${process.env?.ORDZAAR_BEARER_TOKEN}`,
+            "x-lambda-bot": process.env?.ORDZAAR_SECRET_KEY,
           },
         },
       );
