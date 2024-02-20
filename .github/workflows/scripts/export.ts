@@ -48,10 +48,6 @@ async function main() {
           message: `chore(bot): update ${uid} hashlist`,
           content: btoa(contents.data.inscriptions),
           sha,
-          committer: {
-            name: "Ordo",
-            email: "engineering@ordzaar.com",
-          },
           headers: {
             accept: "application/vnd.github+json",
           },
