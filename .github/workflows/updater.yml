@@ -1,8 +1,9 @@
 name: Update Hashlists
 
+# Runs every 3 hours
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 */3 * * *"
 
 jobs:
   update_hashlist:
@@ -26,3 +27,10 @@ jobs:
           ORDZAAR_SECRET_KEY: ${{ secrets.ORDZAAR_SECRET_KEY }}
           ORDZAAR_PATH_KEY: ${{ secrets.ORDZAAR_PATH_KEY }}
           ORDZAAR_BOT_TOKEN: ${{ secrets.ORDZAAR_BOT_TOKEN }}
+      - name: Prettier
+        uses: creyD/prettier_action@31355f8eef017f8aeba2e0bc09d8502b13dbbad1 # v4.3
+        with:
+          # This part is also where you can pass other options, for example:
+          prettier_options: --write **/*.{json,ts}
+          only_changed: True
+          github_token: ${{ secrets.ORDZAAR_BOT_TOKEN }}
