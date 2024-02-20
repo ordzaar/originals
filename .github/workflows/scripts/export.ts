@@ -38,15 +38,16 @@ async function main() {
           },
         },
       );
-
-      if (data[0] != undefined) {
+      const sha = (data as any).sha;
+      console.log(sha);
+      if (sha != undefined) {
         await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
           owner: "ordzaar",
           repo: "originals",
           path: `collections/${uid}/inscription.json`,
           message: `chore(bot): update ${uid} hashlist`,
           content: btoa(contents.data.inscriptions),
-          sha: data[0].sha,
+          sha,
           committer: {
             name: "Ordo",
             email: "engineering@ordzaar.com",
