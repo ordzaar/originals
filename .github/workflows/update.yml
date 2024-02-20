@@ -1,0 +1,25 @@
+name: Update Hashlists
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"
+  push:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflows }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update_hashlist:
+    name: Update specified hashlists
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - run: corepack enable pnpm
+      - uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8 # v4.0.1
+        with:
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
+      - run: pnpm install --frozen-lockfile
