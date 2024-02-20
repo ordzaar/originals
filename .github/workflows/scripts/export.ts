@@ -6,13 +6,7 @@ async function main() {
     auth: process.env.GITHUB_ACCESS_TOKEN
   });
 
-  const COLLECTION_UIDS: any = await octokit.rest.actions.getEnvironmentVariable({
-    repository_id: 728652590,
-    environment_name: 'Production',
-    name: 'COLLECTION_UIDS'
-  });
-
-  const uids = COLLECTION_UIDS.value?.split(',') ?? [];
+  const uids = process.env.COLLECTION_UIDS?.split(',') ?? [];
 
   console.log(uids);
 }
