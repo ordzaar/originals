@@ -1,3 +1,3 @@
 module.exports = {
-  "*.{json}": [buildEslintCommand, "prettier --write"],
+  "*.{json}": ["prettier --write"],
 };
