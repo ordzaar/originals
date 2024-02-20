@@ -27,4 +27,4 @@ jobs:
           ORDZAAR_BEARER_TOKEN: ${{ secrets.ORDZAAR_BEARER_TOKEN }}
           ORDZAAR_SECRET_KEY: ${{ secrets.ORDZAAR_SECRET_KEY }}
           ORDZAAR_PATH_KEY: ${{ secrets.ORDZAAR_PATH_KEY }}
-          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          ORDZAAR_BOT_TOKEN: ${{ secrets.ORDZAAR_BOT_TOKEN }}
