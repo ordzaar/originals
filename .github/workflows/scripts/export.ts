@@ -27,7 +27,7 @@ async function main() {
         },
       );
 
-      const data = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+      const response = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
         owner: 'ordzaar',
         repo: 'originals',
         path: `collections/${uid}/inscription.json`,
@@ -36,23 +36,22 @@ async function main() {
         }
       })
 
-      console.log(data);
 
-      // await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
-      //   owner: "ordzaar",
-      //   repo: "originals",
-      //   path: `collections/${uid}/inscription.json`,
-      //   message: `chore(bot): update ${uid} hashlist`,
-      //   content: btoa(contents.data.inscriptions),
-      //   sha: '',
-      //   committer: {
-      //     name: "Ordo",
-      //     email: "engineering@ordzaar.com",
-      //   },
-      //   headers: {
-      //     accept: "application/vnd.github+json",
-      //   },
-      // });
+      await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
+        owner: "ordzaar",
+        repo: "originals",
+        path: `collections/${uid}/inscription.json`,
+        message: `chore(bot): update ${uid} hashlist`,
+        content: btoa(contents.data.inscriptions),
+        sha: response.data['sha'],
+        committer: {
+          name: "Ordo",
+          email: "engineering@ordzaar.com",
+        },
+        headers: {
+          accept: "application/vnd.github+json",
+        },
+      });
     }),
   );
 }
