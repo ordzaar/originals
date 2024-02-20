@@ -40,16 +40,17 @@ async function main() {
       );
       const sha = (data as any).sha;
       console.log(`Updating ${uid}...`);
-      if (sha != undefined) {
-        await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
-          owner: "ordzaar",
-          repo: "originals",
-          path: `collections/${uid}/inscription.json`,
-          message: `chore(bot): update ${uid} hashlist`,
-          content: btoa(contents.data.inscriptions.toString()),
-          sha,
-        });
-      }
+      console.log(contents.data.inscriptions.toString());
+      // if (sha != undefined) {
+      //   await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
+      //     owner: "ordzaar",
+      //     repo: "originals",
+      //     path: `collections/${uid}/inscription.json`,
+      //     message: `chore(bot): update ${uid} hashlist`,
+      //     content: btoa(contents.data.inscriptions.toString()),
+      //     sha,
+      //   });
+      // }
     }),
   );
 }
