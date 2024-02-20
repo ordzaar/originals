@@ -5,9 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@octokit/rest':
-    specifier: ^20.0.2
-    version: 20.0.2
+  '@octokit/core':
+    specifier: ^5.1.0
+    version: 5.1.0
+  '@octokit/plugin-create-or-update-text-file':
+    specifier: ^4.0.1
+    version: 4.0.1(@octokit/core@5.1.0)
   axios:
     specifier: ^1.6.7
     version: 1.6.7
@@ -192,32 +195,14 @@ packages:
     resolution: {integrity: sha512-6G+ywGClliGQwRsjvqVYpklIfa7oRPA0vyhPQG/1Feh+B+wU0vGH1JiJ5T25d3g1JZYBHzR2qefLi9x8Gt+cpw==}
     dev: false
 
-  /@octokit/plugin-paginate-rest@9.1.5(@octokit/core@5.1.0):
-    resolution: {integrity: sha512-WKTQXxK+bu49qzwv4qKbMMRXej1DU2gq017euWyKVudA6MldaSSQuxtz+vGbhxV4CjxpUxjZu6rM2wfc1FiWVg==}
+  /@octokit/plugin-create-or-update-text-file@4.0.1(@octokit/core@5.1.0):
+    resolution: {integrity: sha512-r0kY7MrV+QTTPeVzNmjeAuuPraF8i6cQ2ff2/W+C2monXTAyx21jLd/2jczrC2e+ohnXQvDT3acqpBhtBcqXYQ==}
     engines: {node: '>= 18'}
     peerDependencies:
-      '@octokit/core': '>=5'
+      '@octokit/core': '>= 5'
     dependencies:
       '@octokit/core': 5.1.0
-      '@octokit/types': 12.5.0
-    dev: false
-
-  /@octokit/plugin-request-log@4.0.0(@octokit/core@5.1.0):
-    resolution: {integrity: sha512-2uJI1COtYCq8Z4yNSnM231TgH50bRkheQ9+aH8TnZanB6QilOnx8RMD2qsnamSOXtDj0ilxvevf5fGsBhBBzKA==}
-    engines: {node: '>= 18'}
-    peerDependencies:
-      '@octokit/core': '>=5'
-    dependencies:
-      '@octokit/core': 5.1.0
-    dev: false
-
-  /@octokit/plugin-rest-endpoint-methods@10.3.0(@octokit/core@5.1.0):
-    resolution: {integrity: sha512-c/fjpoHispRvBZuRoTVt/uALg7pXa9RQbXWJiDMk6NDkGNomuAZG7YuYYpZoxeoXv+kVRjIDTsO0e1z0pei+PQ==}
-    engines: {node: '>= 18'}
-    peerDependencies:
-      '@octokit/core': '>=5'
-    dependencies:
-      '@octokit/core': 5.1.0
+      '@octokit/request-error': 5.0.1
       '@octokit/types': 12.5.0
     dev: false
 
@@ -238,16 +223,6 @@ packages:
       '@octokit/request-error': 5.0.1
       '@octokit/types': 12.5.0
       universal-user-agent: 6.0.1
-    dev: false
-
-  /@octokit/rest@20.0.2:
-    resolution: {integrity: sha512-Ux8NDgEraQ/DMAU1PlAohyfBBXDwhnX2j33Z1nJNziqAfHi70PuxkFYIcIt8aIAxtRE7KVuKp8lSR8pA0J5iOQ==}
-    engines: {node: '>= 18'}
-    dependencies:
-      '@octokit/core': 5.1.0
-      '@octokit/plugin-paginate-rest': 9.1.5(@octokit/core@5.1.0)
-      '@octokit/plugin-request-log': 4.0.0(@octokit/core@5.1.0)
-      '@octokit/plugin-rest-endpoint-methods': 10.3.0(@octokit/core@5.1.0)
     dev: false
 
   /@octokit/types@12.5.0:

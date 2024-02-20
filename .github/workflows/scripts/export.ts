@@ -1,8 +1,10 @@
-import { Octokit } from "@octokit/rest";
+import { Octokit } from "@octokit/core";
 import axios from "axios";
+import {createOrUpdateTextFile} from "@octokit/plugin-create-or-update-text-file";
 
 async function main() {
-  const octokit = new Octokit({
+  const MyOctokit = Octokit.plugin(createOrUpdateTextFile);
+  const octokit = new MyOctokit({
     auth: process.env.GITHUB_ACCESS_TOKEN,
   });
 
@@ -26,7 +28,18 @@ async function main() {
           },
         },
       );
-      console.log(contents.data.meta.name);
+
+      const {
+        updated,
+        data,
+      } = await octokit.createOrUpdateTextFile({
+        owner: "ordzaar",
+        repo: "originals",
+        path: `collections/${uid}/inscription.json`,
+        content: contents.data.inscriptions,
+        message: `chore(bot): update ${uid} hashlist`,
+      });
+      console.log(data);
     }),
   );
 }

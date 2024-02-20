@@ -23,7 +23,8 @@
   },
   "packageManager": "pnpm@8.15.3",
   "dependencies": {
-    "@octokit/rest": "^20.0.2",
+    "@octokit/core": "^5.1.0",
+    "@octokit/plugin-create-or-update-text-file": "^4.0.1",
     "axios": "^1.6.7",
     "ts-node": "^10.9.2"
   }
