@@ -19,5 +19,5 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
-      - run: ts-node scripts/export.ts
+      - run: npx ts-node scripts/export.ts
         name: Run updater script
