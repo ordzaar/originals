@@ -23,3 +23,6 @@ jobs:
         name: Run updater script
         env:
           COLLECTION_UIDS: ${{ vars.COLLECTION_UIDS }}
+          ENDPOINT: ${{ secrets.ENDPOINT }}
+          ORDZAAR_BEARER_TOKEN: ${{ secrets.ORDZAAR_BEARER_TOKEN }}
+          ORDZAAR_SECRET_KEY: ${{ secrets.ORDZAAR_SECRET_KEY }}
