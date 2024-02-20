@@ -5,6 +5,7 @@
   "scripts": {
     "prepare": "husky",
     "format": "prettier --write .",
+    "updater": "ts-node .github/workflows/scripts/export.ts",
     "lint": "eslint ."
   },
   "devDependencies": {
