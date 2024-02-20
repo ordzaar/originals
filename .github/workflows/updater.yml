@@ -6,10 +6,6 @@ on:
   push:
     branches: [main]
 
-concurrency:
-  group: ${{ github.workflows }}-${{ github.event_name }}-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   update_hashlist:
     name: Update specified hashlists
