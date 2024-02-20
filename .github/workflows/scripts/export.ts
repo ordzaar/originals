@@ -7,18 +7,21 @@ async function main() {
   });
 
   const uids = process.env.COLLECTION_UIDS?.split(",") ?? [];
+  const endpoint = process.env?.ENDPOINT as string;
+  const token = process.env?.ORDZAAR_BEARER_TOKEN as string;
+  const secretKey = process.env?.ORDZAAR_SECRET_KEY as string;
 
   await Promise.all(
     uids.map(async (uid) => {
       const contents = await axios.post(
-        process.env?.ENDPOINT,
+        endpoint,
         {
           collectionUid: uid,
         },
         {
           headers: {
-            Authorization: `Bearer ${process.env?.ORDZAAR_BEARER_TOKEN}`,
-            "x-lambda-bot": process.env?.ORDZAAR_SECRET_KEY,
+            Authorization: `Bearer ${token}`,
+            "x-lambda-bot": secretKey,
           },
         },
       );
