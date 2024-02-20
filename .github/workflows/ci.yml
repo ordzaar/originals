@@ -23,4 +23,4 @@ jobs:
           cache: "pnpm"
 
       - run: pnpm install --frozen-lockfile
-      - run: npx --no-install prettier --check "collections/**/*.{json}"
+      - run: npx --no-install prettier --check "collections/**/inscription.json"
