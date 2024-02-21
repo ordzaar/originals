@@ -9,9 +9,9 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@ordzaar/standard-linter": "^1.3.0",
-    "@ordzaar/standard-prettier": "^1.3.0",
-    "@ordzaar/standard-typescript": "^1.3.0",
+    "@ordzaar/standard-linter": "^1.4.0",
+    "@ordzaar/standard-prettier": "^1.4.0",
+    "@ordzaar/standard-typescript": "^1.4.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "semver": "^7.6.0",
