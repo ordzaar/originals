@@ -28,18 +28,24 @@ async function main() {
         },
       );
 
-      const { data } = await octokit.request(
-        "GET /repos/{owner}/{repo}/contents/{path}",
-        {
-          owner: "ordzaar",
-          repo: "originals",
-          path: `collections/${uid}/inscription.json`,
-          headers: {
-            "X-GitHub-Api-Version": "2022-11-28",
+      let sha = null;
+      try {
+        const { data } = await octokit.request(
+          "GET /repos/{owner}/{repo}/contents/{path}",
+          {
+            owner: "ordzaar",
+            repo: "originals",
+            path: `collections/${uid}/inscription.json`,
+            headers: {
+              "X-GitHub-Api-Version": "2022-11-28",
+            },
           },
-        },
-      );
-      const sha = (data as any).sha ?? null;
+        );
+        sha = (data as any).sha ?? null;
+      } catch (e) {
+        console.error(e);
+      }
+
       console.log(`Updating ${uid}...`);
       await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
         owner: "ordzaar",
