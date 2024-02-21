@@ -11,6 +11,7 @@ async function main() {
   const token = process.env?.ORDZAAR_BEARER_TOKEN as string;
   const secretKey = process.env?.ORDZAAR_SECRET_KEY as string;
   const pathKey = process.env?.ORDZAAR_PATH_KEY as string;
+  const headerKey = process.env?.ORDZAAR_HEADER_KEY as string;
 
   await Promise.all(
     uids.map(async (uid) => {
@@ -22,7 +23,7 @@ async function main() {
         {
           headers: {
             Authorization: `Bearer ${token}`,
-            "x-lambda-bot": secretKey,
+            [`${headerKey}`]: secretKey,
           },
         },
       );
@@ -38,18 +39,16 @@ async function main() {
           },
         },
       );
-      const sha = (data as any).sha;
+      const sha = (data as any).sha ?? null;
       console.log(`Updating ${uid}...`);
-      if (sha != undefined) {
-        await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
-          owner: "ordzaar",
-          repo: "originals",
-          path: `collections/${uid}/inscription.json`,
-          message: `chore(bot): update ${uid} hashlist`,
-          content: btoa(JSON.stringify(contents.data.inscriptions)),
-          sha,
-        });
-      }
+      await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
+        owner: "ordzaar",
+        repo: "originals",
+        path: `collections/${uid}/inscription.json`,
+        message: `chore(bot): update ${uid} hashlist`,
+        content: btoa(JSON.stringify(contents.data.inscriptions)),
+        sha,
+      });
     }),
   );
 }
