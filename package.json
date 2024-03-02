@@ -9,9 +9,9 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@ordzaar/standard-linter": "^1.4.0",
-    "@ordzaar/standard-prettier": "^1.4.0",
-    "@ordzaar/standard-typescript": "^1.4.0",
+    "@ordzaar/standard-linter": "^1.4.1",
+    "@ordzaar/standard-prettier": "^1.4.1",
+    "@ordzaar/standard-typescript": "^1.4.1",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "semver": "^7.6.0",
@@ -23,7 +23,7 @@
   },
   "packageManager": "pnpm@8.15.3",
   "dependencies": {
-    "@octokit/core": "^5.1.0",
+    "@octokit/core": "^6.0.1",
     "axios": "^1.6.7",
     "ts-node": "^10.9.2"
   }
