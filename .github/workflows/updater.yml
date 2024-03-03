@@ -3,7 +3,7 @@ name: Update Hashlists
 # Runs every 3 hours
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "*/30 * * * *"
 
 jobs:
   update_hashlist:
