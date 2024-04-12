@@ -1,44 +1,44 @@
- [
-    {
-      "id": "4d44332ecf229bc14819c3c640f62714c553c9fe0aec77e217c447a1beede553i0",
-      "meta": {
-        "name": "Spartan Machines #1"
-      }
-    },
-    {
-      "id": "28147a263c609fc3f4c9e8b2850d6caef559f7f12ea3eca319956ad099bd5704i0",
-      "meta": {
-        "name": "Spartan Machines #2"
-      }
-    },
-    {
-      "id": "81e35cbabc2d1c01bede2e5115db93857f4c5b3b350b0928fa8761b3c5b907d3i0",
-      "meta": {
-        "name": "Spartan Machines #3"
-      }
-    },
-    {
-      "id": "3ca3e5535f6a02576827833fa0aed4182592b0478897a62b0646f26fdf7bb661i0",
-      "meta": {
-        "name": "Spartan Machines #4"
-      }
-    },
-    {
-      "id": "b015d78f5f2aabf89f3eaaf5aa361b94ea2fcb25f1e9eb584066f6b3860512d2i0",
-      "meta": {
-        "name": "Spartan Machines #5"
-      }
-    },
-    {
-      "id": "95f75214e18243e7bfc8148bd21b40483129aadf4df05d697127e7980e4d84c0i0",
-      "meta": {
-        "name": "Spartan Machines #6"
-      }
-    },
-    {
-      "id": "4f2908b5330b5854b4564fd32ecf4fcd83c81ad973b5672e5d9cfd4da6bf8266i0",
-      "meta": {
-        "name": "Spartan Machines #7"
-      }
+[
+  {
+    "id": "4d44332ecf229bc14819c3c640f62714c553c9fe0aec77e217c447a1beede553i0",
+    "meta": {
+      "name": "Spartan Machines #1"
     }
- ]
+  },
+  {
+    "id": "28147a263c609fc3f4c9e8b2850d6caef559f7f12ea3eca319956ad099bd5704i0",
+    "meta": {
+      "name": "Spartan Machines #2"
+    }
+  },
+  {
+    "id": "81e35cbabc2d1c01bede2e5115db93857f4c5b3b350b0928fa8761b3c5b907d3i0",
+    "meta": {
+      "name": "Spartan Machines #3"
+    }
+  },
+  {
+    "id": "3ca3e5535f6a02576827833fa0aed4182592b0478897a62b0646f26fdf7bb661i0",
+    "meta": {
+      "name": "Spartan Machines #4"
+    }
+  },
+  {
+    "id": "b015d78f5f2aabf89f3eaaf5aa361b94ea2fcb25f1e9eb584066f6b3860512d2i0",
+    "meta": {
+      "name": "Spartan Machines #5"
+    }
+  },
+  {
+    "id": "95f75214e18243e7bfc8148bd21b40483129aadf4df05d697127e7980e4d84c0i0",
+    "meta": {
+      "name": "Spartan Machines #6"
+    }
+  },
+  {
+    "id": "4f2908b5330b5854b4564fd32ecf4fcd83c81ad973b5672e5d9cfd4da6bf8266i0",
+    "meta": {
+      "name": "Spartan Machines #7"
+    }
+  }
+]
